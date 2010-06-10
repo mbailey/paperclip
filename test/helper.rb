@@ -86,6 +86,7 @@ def rebuild_model options = {}
     table.column :avatar_content_type, :string
     table.column :avatar_file_size, :integer
     table.column :avatar_updated_at, :datetime
+    table.column :avatar_fingerprint, :string
   end
   rebuild_class options
 end
@@ -105,6 +106,7 @@ class FakeModel
                 :avatar_file_size,
                 :avatar_last_updated,
                 :avatar_content_type,
+                :avatar_fingerprint,
                 :id
 
   def errors
